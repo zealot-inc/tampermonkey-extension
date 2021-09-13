@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         esa.io Slide theme for ZEALOT
+// @name         esa.io Slide theme extension for ZEALOT
 // @namespace    https://bitbucket.org/zealotinc/tampermonkey-extension/
 // @version      0.1
 // @author       Danny Gim<danny.gim@zealot.co.jp>
