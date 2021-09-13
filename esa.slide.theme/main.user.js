@@ -6,8 +6,8 @@
 // @description  This script is to apply the esa.io slide theme for ZEALOT Inc.
 // @homepage     https://bitbucket.org/zealotinc/tampermonkey-extension/
 // @iconURL      https://zealot.co.jp/img/ico/favicon-32x32.png
-// @updateURL    https://bitbucket.org/zealotinc/tampermonkey-extension/raw/main/esa.slide.theme/main.js
-// @downloadURL  https://bitbucket.org/zealotinc/tampermonkey-extension/raw/main/esa.slide.theme/main.js
+// @updateURL    https://bitbucket.org/zealotinc/tampermonkey-extension/raw/main/esa.slide.theme/main.user.js
+// @downloadURL  https://bitbucket.org/zealotinc/tampermonkey-extension/raw/main/esa.slide.theme/main.user.js
 // @match        https://zealot.esa.io/posts/*/slides*
 // @grant        none
 // ==/UserScript==
