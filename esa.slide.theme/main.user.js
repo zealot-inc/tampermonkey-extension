@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         esa.io Slide theme extension for ZEALOT
 // @namespace    https://bitbucket.org/zealotinc/tampermonkey-extension/
-// @version      0.2
+// @version      0.2.1
 // @author       Danny Gim<danny.gim@zealot.co.jp>
 // @description  This script is to apply the esa.io slide theme for ZEALOT Inc.
 // @homepage     https://bitbucket.org/zealotinc/tampermonkey-extension/
@@ -36,6 +36,8 @@
                     background-repeat: no-repeat;
                     background-size: cover;
                 `;
+
+                slide.querySelector('h2').style.cssText = `text-shadow: 0px 0px 6px rgb(0 0 0 / 80%);`;
             }
         });
 })();
