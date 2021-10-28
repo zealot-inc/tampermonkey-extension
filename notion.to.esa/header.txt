@@ -1,0 +1,17 @@
+
+// ==UserScript==
+// @name         publish Notion page to esa.io for ZEALOT
+// @namespace    https://bitbucket.org/zealotinc/tampermonkey-extension/
+// @version      0.1
+// @author       Danny Gim<danny.gim@zealot.co.jp>
+// @description  This script is to publish notion page to the esa.io.
+// @homepage     https://bitbucket.org/zealotinc/tampermonkey-extension/
+// @iconURL      https://zealot.co.jp/img/ico/favicon-32x32.png
+// @updateURL    https://bitbucket.org/zealotinc/tampermonkey-extension/raw/main/notion.to.esa/main.user.js
+// @downloadURL  https://bitbucket.org/zealotinc/tampermonkey-extension/raw/main/notion.to.esa/main.user.js
+// @match        https://www.notion.so/*
+// @grant        GM_setValue
+// @grant        GM_getValue
+// @grant        GM_deleteValue
+// ==/UserScript==
+

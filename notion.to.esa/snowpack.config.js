@@ -4,7 +4,14 @@ module.exports = {
         src: "/dist",
     },
     plugins: [
-        "@snowpack/plugin-typescript"
+        "@snowpack/plugin-typescript",
+        [
+            "./plugin/add-tampermonkey-header.js",
+            {
+                targetJsPath: "main.user.js",
+                headerPath: "./header.txt"
+            }
+        ]
     ],
     devOptions: {
         hmr: false
