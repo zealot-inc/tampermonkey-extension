@@ -1,28 +1,26 @@
 // ==UserScript==
 // @name         esa.io Slide theme extension for ZEALOT
-// @namespace    https://bitbucket.org/zealotinc/tampermonkey-extension/
-// @version      0.2.1
+// @namespace    https://github.com/zealot-inc/tampermonkey-extension/
+// @version      0.3.0
 // @author       Danny Gim<danny.gim@zealot.co.jp>
 // @description  This script is to apply the esa.io slide theme for ZEALOT Inc.
-// @homepage     https://bitbucket.org/zealotinc/tampermonkey-extension/
+// @homepage     https://github.com/zealot-inc/tampermonkey-extension/
 // @iconURL      https://zealot.co.jp/img/ico/favicon-32x32.png
-// @updateURL    https://bitbucket.org/zealotinc/tampermonkey-extension/raw/main/esa.slide.theme/main.user.js
-// @downloadURL  https://bitbucket.org/zealotinc/tampermonkey-extension/raw/main/esa.slide.theme/main.user.js
+// @updateURL    https://github.com/zealot-inc/tampermonkey-extension/raw/main/esa.slide.theme/main.user.js
+// @downloadURL  https://github.com/zealot-inc/tampermonkey-extension/raw/main/esa.slide.theme/main.user.js
 // @match        https://zealot.esa.io/posts/*/slides*
-// @grant        none
+// @resource     zealot_css https://github.com/zealot-inc/tampermonkey-extension/raw/main/esa.slide.theme/style.css
+// @grant        GM_getResourceText
+// @grant        GM_addStyle
 // ==/UserScript==
 
 (function () {
     'use strict';
 
-    // change background color
-    document.querySelector('.backgrounds').style.cssText = `
-        background-color: rgb(204, 94, 0);
-        background-image: url(https://zealot.co.jp/img/ico/favicon-196x196.png);
-        background-repeat: no-repeat;
-        background-size: 5vw;
-        background-position: 1vw 1vw;
-    `;
+    // load custom CSS
+    // @see https://github.com/Tampermonkey/tampermonkey/issues/835
+    const zealotCss = GM_getResourceText('zealot_css');
+    GM_addStyle(zealotCss);
 
     // set slide background image
     const slideBackgrounds = document.querySelectorAll('.backgrounds .slide-background');
@@ -30,14 +28,12 @@
         .forEach((slide, index) => {
             const bgImg = slide.querySelector('img[data-background="true"]');
             if (bgImg) {
-                bgImg.style.cssText = `display: none;`;
+                bgImg.classList.add('zealot-style');
+                slide.querySelector('h2').classList.add('zealot-style');
+
                 slideBackgrounds[index].style.cssText = `
                     background-image: url(${bgImg.src});
-                    background-repeat: no-repeat;
-                    background-size: cover;
                 `;
-
-                slide.querySelector('h2').style.cssText = `text-shadow: 0px 0px 6px rgb(0 0 0 / 80%);`;
             }
         });
 })();
