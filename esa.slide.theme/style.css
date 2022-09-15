@@ -7,11 +7,11 @@
     background-position: 1vw 1vw !important;
 }
 
-.backgrounds .slides section h2.zealot-style {
+.slides section h2.zealot-style {
     text-shadow: 0px 0px 6px rgb(0 0 0 / 80%) !important;
 }
 
-.backgrounds .slides section img[data-background=true].zealot-style {
+.slides section img[data-background=true].zealot-style {
     display: none !important;
 }
 
